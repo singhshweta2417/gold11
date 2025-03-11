@@ -13,8 +13,12 @@ class MlmApiService{
       "userid":userToken,
       "date":selectedDate
     };
+    print(data);
+    print('khjg');
     try {
       final response = await _apiServices.getPostApiResponse(AppApiUrls.getUserPromotionDataApiEndPoint, data);
+      print(response);
+      print('jgkgi');
       return UserPromotionModel.fromJson(response);
     } catch (e) {
       rethrow;

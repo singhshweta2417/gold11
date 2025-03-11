@@ -32,6 +32,7 @@ class Data {
   dynamic email;
   dynamic gender;
   dynamic otp;
+  dynamic InvitationCode;
   dynamic dob;
   dynamic age;
   dynamic image;
@@ -54,6 +55,7 @@ class Data {
         this.email,
         this.gender,
         this.otp,
+        this.InvitationCode,
         this.dob,
         this.age,
         this.image,
@@ -78,6 +80,7 @@ class Data {
     otp = json['otp'];
     dob = json['dob'];
     age = json['age'];
+    InvitationCode = json['Invitation_code'];
     image = json['image'];
     status = json['status'];
     isVerify = json['is_verify'];

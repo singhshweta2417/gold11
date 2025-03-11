@@ -47,6 +47,8 @@ class MlmViewModel extends ChangeNotifier {
     _setMlmViewState(MlmViewState.loading);
     try {
       _userPromotionData = await _mlmApiService.getUserPromotionData(userToken, previousDate);
+      print(_userPromotionData);
+      print('_userPromotionData');
       _setMlmViewState(MlmViewState.success);
       notifyListeners();
     } catch (e) {
@@ -60,6 +62,8 @@ class MlmViewModel extends ChangeNotifier {
    _setDataLoading(true);
     try {
       _myReferralData = await _mlmApiService.getReferralData(userToken, referralDataType);
+      print(_myReferralData);
+      print('object');
       _setDataLoading(false);
       notifyListeners();
     } catch (e) {
@@ -113,4 +117,5 @@ class MlmViewModel extends ChangeNotifier {
         listen: false)
         .userToken,"");
   }
+
 }
